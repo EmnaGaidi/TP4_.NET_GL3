@@ -1,0 +1,33 @@
+﻿@model List<Student>;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Student List";
+}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">University</th>
+      <th scope="col">Timestamp</th>
+      <th scope="col">Course</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach(Student s in Model){
+    <tr>
+      <th scope="row">@s.id</th>
+      <td>@s.first_name</td>
+      <td>@s.last_name</td>
+      <td>@s.phone_number</td>
+      <td>@s.university</td>
+      <td>@s.timestamp</td>
+      <td>@s.course</td>
+    </tr>
+        }
+  </tbody>
+</table>
